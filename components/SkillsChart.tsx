@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   Radar,
@@ -17,16 +18,16 @@ const SkillsChart: React.FC = () => {
       <div className="bg-white p-6 rounded-3xl shadow-xl border border-slate-100">
         <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
           <span className="w-2 h-8 bg-blue-600 rounded-full"></span>
-          Top Skills
+          Core Competencies
         </h3>
         {/* Container height ensures chart has room */}
         <div className="h-[400px] w-full">
           <ResponsiveContainer width="100%" height="100%">
-            <RadarChart cx="50%" cy="50%" outerRadius="55%" data={TOP_SKILLS_DATA}>
+            <RadarChart cx="50%" cy="50%" outerRadius="60%" data={TOP_SKILLS_DATA}>
               <PolarGrid stroke="#e2e8f0" />
               <PolarAngleAxis 
                 dataKey="subject" 
-                tick={{ fill: '#475569', fontSize: 12, fontWeight: 600 }} 
+                tick={{ fill: '#475569', fontSize: 11, fontWeight: 600 }} 
               />
               <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
               <Radar
@@ -63,6 +64,15 @@ const SkillsChart: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
+        
+        {/* Added mini-CTA for skills section */}
+        <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-8 rounded-3xl shadow-lg text-white">
+          <h4 className="text-xl font-bold mb-2">Need a tailored training program?</h4>
+          <p className="text-blue-100 mb-4 text-sm">I design custom workshops for corporate teams.</p>
+          <a href="#contact" className="inline-block bg-white text-blue-700 font-bold px-6 py-2 rounded-full text-sm hover:bg-blue-50 transition-colors">
+            Let's Discuss
+          </a>
         </div>
       </div>
     </div>

@@ -1,10 +1,11 @@
+
 import React from 'react';
-import { Mail, Phone, Linkedin, MapPin, Download } from 'lucide-react';
+import { Mail, Phone, Linkedin, MapPin, CalendarCheck } from 'lucide-react';
 import { PROFILE } from '../constants';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pb-20 pt-32 lg:pt-40 px-6 rounded-b-[3rem] lg:rounded-b-[5rem] overflow-hidden shadow-2xl">
+    <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pb-24 pt-32 lg:pt-40 px-6 rounded-b-[3rem] lg:rounded-b-[5rem] overflow-hidden shadow-2xl">
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
          {/* Abstract background pattern */}
         <div className="absolute top-[-20%] right-[-10%] w-96 h-96 bg-blue-500 rounded-full blur-[100px]"></div>
@@ -50,18 +51,21 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-2">
             <a 
+              href="#contact"
+              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-xl font-semibold transition-all shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1"
+            >
+              <CalendarCheck size={20} />
+              Book a Consultation
+            </a>
+            <a 
               href={`https://${PROFILE.linkedin}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold transition-all shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1"
+              className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-all backdrop-blur-sm border border-white/10"
             >
               <Linkedin size={20} />
-              Connect on LinkedIn
+              LinkedIn Profile
             </a>
-            <button className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-xl font-semibold transition-all shadow-lg border border-slate-700">
-              <Download size={20} />
-              Download Resume
-            </button>
           </div>
         </div>
       </div>

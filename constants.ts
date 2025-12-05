@@ -1,4 +1,5 @@
-import { ExperienceItem, EducationItem, SkillMetric, CertificationItem } from './types';
+
+import { ExperienceItem, EducationItem, SkillMetric, CertificationItem, ServiceItem } from './types';
 
 export const PROFILE = {
   name: "Harish Jaipal",
@@ -7,16 +8,39 @@ export const PROFILE = {
   email: "harish.organ@gmail.com",
   phone: "+64226788712",
   linkedin: "www.linkedin.com/in/harish-jaipal-35a896b",
-  summary: "Building organisational strategy for undertaking Development of all employees. With proficiency in training research & development of contents, counselling & mentoring. Proven ability to provide a high level of Customer Service surpassing market standards. Expert in conducting Leadership Programs, TTT Programs, Employee Development Interventions, with deep understanding of quality management in a services environment. Dedicated to transforming lives and empowering people to achieve their desired success.",
+  summary: "I am a transformational expert and coach with over 18 years of experience. I guide and empower people to achieve their desired success and transform their dreams into realities. My mission is to transform the lives of 50,000 people in the next 5 years. I specialize in English pronunciation, leadership development, and organizational strategy.",
 };
 
 export const TOP_SKILLS_DATA: SkillMetric[] = [
-  { subject: 'Leadership Coach', A: 95, fullMark: 100 },
+  { subject: 'Leadership', A: 95, fullMark: 100 },
   { subject: 'Training & Dev', A: 98, fullMark: 100 },
   { subject: 'Process Mgmt', A: 85, fullMark: 100 },
-  { subject: 'Communication', A: 95, fullMark: 100 },
+  { subject: 'Pronunciation Coach', A: 98, fullMark: 100 }, // Replaced Communication
   { subject: 'Strategy', A: 90, fullMark: 100 },
   { subject: 'Mentoring', A: 92, fullMark: 100 },
+];
+
+export const SERVICES: ServiceItem[] = [
+  {
+    title: "English Pronunciation Coaching",
+    description: "Expert guidance on accent neutralization, intonation, and clear communication for global professionals.",
+    icon: "Mic"
+  },
+  {
+    title: "Leadership Coaching",
+    description: "Transformational coaching sessions to empower individuals and leaders to overcome challenges and achieve success.",
+    icon: "Users"
+  },
+  {
+    title: "Corporate Training (TTT)",
+    description: "Conducting Train-the-Trainer workshops and comprehensive employee development interventions.",
+    icon: "Presentation"
+  },
+  {
+    title: "Organizational Strategy",
+    description: "Building Learning & Development strategies and departments to foster continuous growth at all organizational levels.",
+    icon: "TrendingUp"
+  }
 ];
 
 export const CERTIFICATIONS: CertificationItem[] = [

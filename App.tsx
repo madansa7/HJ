@@ -1,8 +1,11 @@
+
 import React, { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 import Timeline from './components/Timeline';
 import SkillsChart from './components/SkillsChart';
 import Education from './components/Education';
+import Services from './components/Services';
+import ContactForm from './components/ContactForm';
 import { PROFILE } from './constants';
 import { ArrowUp } from 'lucide-react';
 
@@ -22,13 +25,16 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 font-sans pb-20">
+    <div className="min-h-screen bg-slate-50 font-sans pb-10">
       <Hero />
       
-      <main className="max-w-5xl mx-auto px-6 space-y-24 -mt-10 relative z-20">
+      <main className="max-w-6xl mx-auto px-6 space-y-24 -mt-10 relative z-20">
+        {/* Services Section - Promoted to top */}
+        <Services />
+
         {/* About Section */}
-        <div className="bg-white p-8 md:p-10 rounded-3xl shadow-xl shadow-slate-200/50">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Professional Summary</h2>
+        <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-slate-200/50">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">About Me</h2>
           <p className="text-lg text-slate-600 leading-relaxed text-justify">
             {PROFILE.summary}
           </p>
@@ -48,10 +54,15 @@ const App: React.FC = () => {
         <section>
           <Education />
         </section>
+
+        {/* Contact Form */}
+        <section className="pb-10">
+          <ContactForm />
+        </section>
       </main>
 
       {/* Footer */}
-      <footer className="mt-32 border-t border-slate-200 bg-white py-12">
+      <footer className="mt-20 border-t border-slate-200 bg-white py-12">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <p className="text-slate-900 font-semibold text-xl mb-2">{PROFILE.name}</p>
           <p className="text-slate-500 mb-8">{PROFILE.tagline}</p>
